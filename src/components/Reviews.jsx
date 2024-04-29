@@ -66,7 +66,7 @@ const Reviews = () => {
           damping={1e-1}
           triggerOnce={true}
         >
-          <h2 className="h1 text-primary text-4xl font-bold gap-x-3 mb-12 text-center mx-auto">
+          <h2 className="h2 text-primary font-bold gap-x-3 mb-12 text-center mx-auto">
             They say about our work
           </h2>
         </Fade>
@@ -90,7 +90,7 @@ const Reviews = () => {
               // clickable: true,
               dynamicBullets: true,
             }}
-            className="h-[350px]"
+            className="lg:h-[350px] sm:h-[440px]"
           >
             {reviewsData.map((person, index) => {
               return (

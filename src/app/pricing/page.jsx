@@ -18,7 +18,7 @@ const Pricing = () => {
   const { toast } = useToast();
 
   return (
-    <section className="min-h-screen pt-12">
+    <section className="min-h-screen pt-12 max-lg:mb-4">
       <div className="container mx-auto">
         <Fade
           direction="up"
