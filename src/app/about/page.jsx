@@ -55,7 +55,7 @@ const About = () => {
           </h2>
         </Fade>
 
-        <div className="flex flex-col xl:flex-row">
+        <div className="flex flex-col xl:flex-row xl:gap-12">
           {/* Image */}
           <div className="relative flex-1 xl:flex mx-auto">
             <Fade
@@ -66,7 +66,7 @@ const About = () => {
               triggerOnce={true}
             >
               <HeroImg
-                containerStyles="w-[450px] h-[450px] lg:w-[505px] lg:h-[505px] max-sm:w-[350px] max-sm:h-[350px] bg-no-repeat relative"
+                containerStyles="w-[450px] h-[450px] lg:w-[505px] lg:h-[505px] max-sm:w-[320px] max-sm:h-[320px] bg-no-repeat relative"
                 imgSrc="/about/profile.png"
               />
             </Fade>

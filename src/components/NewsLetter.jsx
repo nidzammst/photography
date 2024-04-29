@@ -22,7 +22,7 @@ const NewsLetter = () => {
                 damping={1e-1}
                 triggerOnce={true}
               >
-                <h2 className="text-3xl font-bold tracking-tight section-title sm:text-4xl">
+                <h2 className="h2 text-primary font-bold gap-x-3 mb-12 text-center mx-auto">
                   Need a Photographer?
                 </h2>
               </Fade>

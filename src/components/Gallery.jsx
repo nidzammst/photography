@@ -92,7 +92,7 @@ const projectsData = [
 const Gallery = () => {
   return (
     <section className="relative mb-12 xl:mb-48">
-      <div className="container mx-auto">
+      <div className="md:container mx-auto">
         <Fade
           direction="up"
           delay={400}
