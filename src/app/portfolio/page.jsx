@@ -128,7 +128,7 @@ const Portfolio = () => {
             damping={1e-1}
             triggerOnce={true}
           >
-            <TabsList className="w-full grid h-full md:grid-cols-4 lg:max-w-[740px] mb-12 mx-auto md:border dark:border-none">
+            <TabsList className="w-full grid h-full md:grid-cols-3 lg:max-w-[740px] mb-12 mx-auto md:border dark:border-none">
               {categories.map((category, index) => {
                 return (
                   <TabsTrigger
@@ -145,7 +145,7 @@ const Portfolio = () => {
           </Fade>
 
           {/* Tabs Content */}
-          <div className="text-lg xl:mt-8 grid grid-cols-1 lg:grid-cols-3 gap-4">
+          <div className="text-lg xl:mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             <Fade
               direction="up"
               delay={1000}
