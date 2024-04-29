@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import { Fade } from "react-awesome-reveal";
 
 const projectsData = [
   {
@@ -90,13 +93,33 @@ const Gallery = () => {
   return (
     <section className="relative mb-12 xl:mb-48">
       <div className="container mx-auto">
-        <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
-          My Gallery
-        </h2>
-        <div>
-          {projectsData.map((project) => {
-            return <ProjectCard project={project} key={project.image} />;
-          })}
+        <Fade
+          direction="up"
+          delay={400}
+          cascade
+          damping={1e-1}
+          triggerOnce={true}
+        >
+          <h2 className="section-title mb-8 xl:mb-16 text-center mx-auto">
+            My Gallery
+          </h2>
+        </Fade>
+        <div className="relative flex basis-1 justify-center overflow-hidden bg-gray- py-6 sm:py-12">
+          <div className="mx-auto max-w-screen-xl px-4 w-full">
+            <div className="grid w-full xl:grid-cols-3 sm:grid-cols-2 gap-6">
+              <Fade
+                direction="up"
+                delay={600}
+                cascade
+                damping={1e-1}
+                triggerOnce={true}
+              >
+                {projectsData.map((project) => {
+                  return <ProjectCard project={project} key={project.image} />;
+                })}
+              </Fade>
+            </div>
+          </div>
         </div>
       </div>
     </section>

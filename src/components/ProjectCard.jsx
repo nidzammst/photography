@@ -1,31 +1,33 @@
-import React from "react";
-import { Card, CardHeader } from "./ui/card";
+import Link from "next/link";
 import Image from "next/image";
-import { Badge } from "./ui/badge";
+import { Card } from "./ui/card";
 
 const ProjectCard = ({ project }) => {
   return (
-    <Card className="group overflow-hidden relative">
-      <CardHeader className="p-0">
-        {/* Image */}
-        <div className="relative w-full h-[290px] flex items-center justify-center dark:bg-secondary/40 xl:bg-[100%] xl:bg-no-repeat overflow-hidden">
-          <Image
-            src={project.image}
-            width={440}
-            height={200}
-            alt=""
-            priority
-            className="absolute top-0 shadow-2xl hover:scale-110 transition-all "
-          />
-        </div>
-      </CardHeader>
-
-      <div>
-        <Badge className="uppercase text-sm font-medium mb-2 absolute top-4 left-5">
-          {project.category}
-        </Badge>
-      </div>
-    </Card>
+    <Link href={project.link} className="group">
+      {" "}
+      <div className="relative h-full rounded-md xl:rounded-l-none xl:rounded-r-md overflow-hidden">
+        {" "}
+        <Image
+          src={project.image}
+          alt={project.name}
+          layout="responsive"
+          width={200}
+          height={200}
+          className="object-cover object-center w-full h-full group-hover:scale-125 group-hover:duration-200 transition-all"
+        />{" "}
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+          {" "}
+          <h3 className="text-lg font-medium text-white">
+            {project.name}
+          </h3>{" "}
+          <p className="text-sm text-white uppercase font-medium mb-2 bg-primary rounded-full w-fit px-2">
+            {project.category}
+          </p>{" "}
+          <p className="text-sm text-gray-400">{project.description}</p>{" "}
+        </div>{" "}
+      </div>{" "}
+    </Link>
   );
 };
 
