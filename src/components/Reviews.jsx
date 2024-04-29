@@ -58,7 +58,7 @@ const reviewsData = [
 const Reviews = () => {
   return (
     <section className="mb-12 xl:mb-32">
-      <div className="container mx-auto">
+      <div className="container mx-auto max-sm:overflow-hidden">
         <Fade
           direction="up"
           delay={400}
@@ -66,7 +66,7 @@ const Reviews = () => {
           damping={1e-1}
           triggerOnce={true}
         >
-          <h2 className="section-title mb-12 text-center mx-auto">
+          <h2 className="h1 text-primary text-4xl font-bold gap-x-3 mb-12 text-center mx-auto">
             They say about our work
           </h2>
         </Fade>

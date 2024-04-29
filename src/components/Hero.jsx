@@ -64,13 +64,18 @@ const Hero = () => {
             >
               {/* Subscribe Button */}
               <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12">
-                <div className="flex w-full gap-x-4">
+                <div className="flex w-full gap-x-4 max-sm:flex-wrap max-sm:gap-y-2">
                   <label for="email-address" className="sr-only">
                     Email Address
                   </label>
-                  <Input type="email" id="email" placeholder="Email" />
-                  <Link href="/contact">
-                    <Button className="gap-x-2 bg-black">
+                  <Input
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                    className=""
+                  />
+                  <Link href="/contact" className="my-auto max-sm:w-full">
+                    <Button className="gap-x-2 bg-black max-sm:w-full">
                       Subscribe
                       <RiMenFill size={18} />
                     </Button>
@@ -127,7 +132,7 @@ const Hero = () => {
                   <dt className="text-base leading-7 text-muted-foreground">
                     Years of Experience
                   </dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl mx-auto">
                     <Badge
                       icon={<RiBookmark3Fill />}
                       endCountNum={12}
@@ -149,7 +154,7 @@ const Hero = () => {
                   <dt className="text-base leading-7 text-muted-foreground">
                     Followers
                   </dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl mx-auto">
                     <Badge
                       icon={<RiBookmark3Fill />}
                       endCountNum={1358}
@@ -171,7 +176,7 @@ const Hero = () => {
                   <dt className="text-base leading-7 text-muted-foreground">
                     Projects
                   </dt>
-                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
+                  <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900 sm:text-5xl mx-auto">
                     <Badge
                       icon={<RiBookmark3Fill />}
                       endCountNum={79}

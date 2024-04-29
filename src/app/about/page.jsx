@@ -41,8 +41,8 @@ const infoData = [
 
 const About = () => {
   return (
-    <section className="pb-12 min-h-screen xl:py-24">
-      <div className="container mx-auto">
+    <section className="pb-12 min-h-screen xl:py-24 ">
+      <div className="container mx-auto max-sm:overflow-hidden">
         <Fade
           direction="up"
           delay={400}
@@ -66,7 +66,7 @@ const About = () => {
               triggerOnce={true}
             >
               <HeroImg
-                containerStyles="w-[450px] h-[450px] lg:w-[505px] lg:h-[505px] bg-no-repeat relative"
+                containerStyles="w-[450px] h-[450px] lg:w-[505px] lg:h-[505px] max-sm:w-[350px] max-sm:h-[350px] bg-no-repeat relative"
                 imgSrc="/about/profile.png"
               />
             </Fade>
