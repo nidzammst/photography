@@ -10,7 +10,7 @@ import { Fade } from "react-awesome-reveal";
 
 const NewsLetter = () => {
   return (
-    <section>
+    <section className="container mx-auto">
       <div className="relative bg-tertiary dark:bg-transparent overflow-hidden py-16 sm:py-24 lg:py-32">
         <div className="mx-auto mx-w-7xl px-6 lg:px-8">
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
@@ -49,7 +49,7 @@ const NewsLetter = () => {
                 damping={1e-1}
                 triggerOnce={true}
               >
-                <div className="mt-6 max-w-md gap-x-4 flex">
+                <div className="mt-6 max-w-md gap-x-4 flex max-sm:flex-wrap">
                   <Input
                     id="email-address"
                     name="email"
@@ -59,8 +59,8 @@ const NewsLetter = () => {
                     placeHolder="Enter your email"
                     className=""
                   />
-                  <Link href="/contact" className="my-auto">
-                    <Button>
+                  <Link href="/contact" className="my-auto max-sm:w-full">
+                    <Button className="max-sm:w-full max-sm:mt-2">
                       Subscribe <RiMenFill size={18} />
                     </Button>
                   </Link>
