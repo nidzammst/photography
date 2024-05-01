@@ -26,7 +26,7 @@ const links = [
   },
 ];
 
-const Nav = ({ containerStyles, linkStyles, undelineStyles }) => {
+const Nav = ({ containerStyles, linkStyles, undelineStyles, clickCallback }) => {
   const path = usePathname();
   return (
     <nav className={`${containerStyles}`}>
@@ -36,6 +36,9 @@ const Nav = ({ containerStyles, linkStyles, undelineStyles }) => {
             href={link.path}
             key={link.index}
             className={`capitalize ${linkStyles}`}
+            onClick={() => {
+              if (clickCallback) clickCallback();
+            }}
           >
             {link.path === path && (
               <motion.span
